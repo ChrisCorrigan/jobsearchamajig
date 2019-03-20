@@ -4,6 +4,11 @@
   "description": "A simple app which lets you search for jobs, track skills and keywords, and create automated job searches.",
   "main": "main.js",
   "scripts": {
+    "start": "npm run scss & npm run copyJs && npm run copyFiles; http-server -o",
+    "dev": "npm run scss & npm run copyJs && npm run copyFiles",
+    "scss": "node-sass src/styles/styling-framework.scss public/styling-framework.css",
+    "copyFiles": "copyfiles src/index.html public --flat",
+    "copyJs": "copyfiles src/app/*.js public/js/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/ChrisCorrigan/jobsearchamajig/issues"
   },
-  "homepage": "https://github.com/ChrisCorrigan/jobsearchamajig#readme"
+  "homepage": "https://github.com/ChrisCorrigan/jobsearchamajig#readme",
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {}
 }
