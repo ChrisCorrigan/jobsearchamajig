@@ -12,5 +12,10 @@
             "from": "src/app/lib/*.js",
             "to": "public/js/lib/"
         }
-    ]
+    ],
+ 
+    "settings": {
+        "whenFileExists": "overwrite",
+        "uglifyJs": false
+    }
 }
